@@ -5,5 +5,5 @@ public class Motorista extends Usuario {
         super(nome,cpf);
     }
     @Override
-    public void avaliaPassageiro(){}
+    public void avalia(Corrida corrida, int nota){corrida.avaliaMotorista(nota);}
 }

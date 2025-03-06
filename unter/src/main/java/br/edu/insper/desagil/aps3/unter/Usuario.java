@@ -11,7 +11,7 @@ public class Usuario {
     public int getCpf(){return cpf;}
     public String getNome(){return nome;}
     public void setNome(String newnome){nome = newnome;}
-    public void avalia(){
+    public void avalia(Corrida corrida, int nota){
 
     }
 }
