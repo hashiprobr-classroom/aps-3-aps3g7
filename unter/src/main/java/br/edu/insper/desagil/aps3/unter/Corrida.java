@@ -25,7 +25,7 @@ public class Corrida {
         return notaPassageiro;
     }
     private int ajuste(int n){
-        int f = 0;
+        int f = n;
         if (n<1){f=1;}
         if (n>5){f=5;}
         return f;

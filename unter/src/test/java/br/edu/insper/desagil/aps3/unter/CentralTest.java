@@ -2,7 +2,7 @@ package br.edu.insper.desagil.aps3.unter;
 
 import org.junit.jupiter.api.Test;
 
-import org.junit.jupiter.api.BeforeEach;
+//import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

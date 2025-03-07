@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MotoristaTest {
+
     @Test
     public void constroi(){
         Motorista motorista = new Motorista("Marcelo","5432154321");
@@ -24,7 +25,7 @@ public class MotoristaTest {
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 3);
-        assertEquals(3,corrida.getNotaPassageiro());
+        assertEquals(3,corrida.getNotaMotorista());
     }
     @Test
     public void avaliaBaixo(){
@@ -33,7 +34,7 @@ public class MotoristaTest {
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 0);
-        assertEquals(1,corrida.getNotaPassageiro());
+        assertEquals(1,corrida.getNotaMotorista());
     }
     @Test
     public void avaliaAlto(){
@@ -42,7 +43,7 @@ public class MotoristaTest {
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 6);
-        assertEquals(5,corrida.getNotaPassageiro());
+        assertEquals(5,corrida.getNotaMotorista());
     }
 
 }
