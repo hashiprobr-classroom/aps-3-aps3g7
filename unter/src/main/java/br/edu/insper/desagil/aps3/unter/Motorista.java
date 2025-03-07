@@ -1,7 +1,7 @@
 package br.edu.insper.desagil.aps3.unter;
 
 public class Motorista extends Usuario {
-    public Motorista(String nome,int cpf){
+    public Motorista(String nome,String cpf){
         super(nome,cpf);
     }
     @Override

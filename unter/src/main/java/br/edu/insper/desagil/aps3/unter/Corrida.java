@@ -5,7 +5,7 @@ public class Corrida {
     private Motorista motorista = null;
     private int notaPassageiro = 0;
     private int notaMotorista = 0;
-    public Corrida(){
+    public Corrida(Passageiro passageiro){
         this.passageiro = passageiro;
 
     }

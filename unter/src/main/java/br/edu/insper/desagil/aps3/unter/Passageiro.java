@@ -1,7 +1,7 @@
 package br.edu.insper.desagil.aps3.unter;
 
 public class Passageiro extends Usuario {
-    public Passageiro(String nome,int cpf){
+    public Passageiro(String nome,String cpf){
         super(nome,cpf);
     }
     @Override
