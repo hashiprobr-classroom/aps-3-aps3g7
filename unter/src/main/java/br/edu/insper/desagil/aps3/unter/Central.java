@@ -22,9 +22,11 @@ public class Central {
         double media = 0;
         int quantidade = 0;
         for (Corrida corrida :this.corridas){
-            if (Objects.equals(corrida.getMotorista().getCpf(),cpf)&& corrida.getNotaMotorista()!=0){
-                media += corrida.getNotaMotorista();
-                quantidade +=1;
+            if (corrida.getMotorista() != null) {
+                if (Objects.equals(corrida.getMotorista().getCpf(), cpf) && corrida.getNotaMotorista() != 0) {
+                    media += corrida.getNotaMotorista();
+                    quantidade += 1;
+                }
             }
         }
         return media/quantidade;
