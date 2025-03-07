@@ -7,20 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MotoristaTest {
     @Test
     public void constroi(){
-        Motorista motorista = new Motorista("Dani","9876543210");
-        assertEquals("9876543210",motorista.getCpf());
-        assertEquals("Dani",motorista.getNome());
+        Motorista motorista = new Motorista("Marcelo","5432154321");
+        assertEquals("5432154321",motorista.getCpf());
+        assertEquals("Marcelo",motorista.getNome());
     }
     @Test
     public void mudaNome(){
-        Motorista motorista = new Motorista("Dani","9876543210");
+        Motorista motorista = new Motorista("Marcelo","5432154321");
         motorista.setNome("Joao");
         assertEquals("Joao",motorista.getNome());
     }
     @Test
     public void avalia(){
-        Motorista motorista = new Motorista("Dani","9876543210");
-        Passageiro passageiro = new Passageiro("Joao","12345567890");
+        Motorista motorista = new Motorista("Marcelo","5432154321");
+        Passageiro passageiro = new Passageiro("Felipe","1234512345");
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 3);
@@ -28,8 +28,8 @@ public class MotoristaTest {
     }
     @Test
     public void avaliaBaixo(){
-        Motorista motorista = new Motorista("Dani","9876543210");
-        Passageiro passageiro = new Passageiro("Joao","12345567890");
+        Motorista motorista = new Motorista("Marcelo","5432154321");
+        Passageiro passageiro = new Passageiro("Felipe","1234512345");
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 0);
@@ -37,8 +37,8 @@ public class MotoristaTest {
     }
     @Test
     public void avaliaAlto(){
-        Motorista motorista = new Motorista("Dani","9876543210");
-        Passageiro passageiro = new Passageiro("Joao","12345567890");
+        Motorista motorista = new Motorista("Marcelo","5432154321");
+        Passageiro passageiro = new Passageiro("Felipe","1234512345");
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 6);

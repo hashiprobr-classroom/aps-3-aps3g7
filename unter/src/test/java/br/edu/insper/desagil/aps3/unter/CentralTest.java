@@ -28,8 +28,8 @@ public class CentralTest {
     @Test
     public void avaliacoesPassageiro(){
         Central central = new Central();
-        Passageiro passageiro1 = new Passageiro("Felipe", 1234512345);
-        Motorista motorista1 = new Motorista("Marcelo", 5432154321);
+        Passageiro passageiro1 = new Passageiro("Felipe", "1234512345");
+        Motorista motorista1 = new Motorista("Marcelo", "5432154321");
 
         Corrida corrida1 = new Corrida(passageiro1);
         corrida1.setMotorista(motorista1);
@@ -49,7 +49,7 @@ public class CentralTest {
         corrida3.avaliaMotorista(5);
         central.adicionaCorrida(corrida3);
 
-        Passageiro passageiro2 = new Passageiro("Joao", 1212121212);
+        Passageiro passageiro2 = new Passageiro("Joao", "1212121212");
         Corrida corrida4 = new Corrida(passageiro2);
         corrida4.setMotorista(motorista1);
         corrida4.avaliaPassageiro(3);
@@ -62,8 +62,8 @@ public class CentralTest {
     @Test
     public void avaliacoesMotorista(){
         Central central = new Central();
-        Passageiro passageiro1 = new Passageiro("Felipe", 1234512345);
-        Motorista motorista1 = new Motorista("Marcelo", 5432154321);
+        Passageiro passageiro1 = new Passageiro("Felipe", "1234512345");
+        Motorista motorista1 = new Motorista("Marcelo", "5432154321");
 
         Corrida corrida1 = new Corrida(passageiro1);
         corrida1.setMotorista(motorista1);
@@ -83,9 +83,9 @@ public class CentralTest {
         corrida3.avaliaMotorista(3);
         central.adicionaCorrida(corrida3);
 
-        Motorista motorista2 = new Motorista("Joao", 1212121212);
+        Motorista motorista2 = new Motorista("Joao", "1212121212");
         Corrida corrida4 = new Corrida(passageiro1);
-        corrida4.setMotorista(motorista1);
+        corrida4.setMotorista(motorista2);
         corrida4.avaliaPassageiro(3);
         corrida4.avaliaMotorista(1);
         central.adicionaCorrida(corrida4);
