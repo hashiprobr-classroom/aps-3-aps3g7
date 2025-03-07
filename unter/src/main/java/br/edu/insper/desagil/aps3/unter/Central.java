@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class Central {
-    private List<Corrida> lista_corridas = new ArrayList<>();
+    private List<Corrida> corridas = new ArrayList<>();
 
     public double mediaPassageiro(String cpf){
         double media = 0;
         int quantidade = 0;
-        for (Corrida corrida :this.lista_corridas){
+        for (Corrida corrida :this.corridas){
             if (Objects.equals(corrida.getPassageiro().getCpf(),cpf)&& corrida.getNotaPassageiro()!=0){
                 media += corrida.getNotaPassageiro();
                 quantidade +=1;
@@ -21,7 +21,7 @@ public class Central {
     public double mediaMotorista(String cpf){
         double media = 0;
         int quantidade = 0;
-        for (Corrida corrida :this.lista_corridas){
+        for (Corrida corrida :this.corridas){
             if (Objects.equals(corrida.getMotorista().getCpf(),cpf)&& corrida.getNotaMotorista()!=0){
                 media += corrida.getNotaMotorista();
                 quantidade +=1;
@@ -29,5 +29,7 @@ public class Central {
         }
         return media/quantidade;
     }
-
+    public void adiciona(Corrida corrida){
+        this.corridas.add(corrida);
+    }
 }
