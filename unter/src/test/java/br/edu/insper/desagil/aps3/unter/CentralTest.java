@@ -92,7 +92,7 @@ public class CentralTest {
         central.adiciona(corrida4);
 
         Corrida corrida5 = new Corrida(passageiro1);
-        corrida5.setMotorista(null);
+        //corrida5.setMotorista(null);
         corrida5.avaliaPassageiro(3);
         corrida5.avaliaMotorista(1);
         central.adiciona(corrida5);
