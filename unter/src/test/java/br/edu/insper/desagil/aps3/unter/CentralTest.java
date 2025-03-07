@@ -1,25 +1,30 @@
 package br.edu.insper.desagil.aps3.unter;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CentralTest {
     private static final double DELTA = 0.000001;
+    private Central central;
+
+    @BeforeEach
+    void setup(){
+        central = new Central();
+    }
 
     @Test
     public void nenhumaAvaliacaoPassageiro(){
-        Central central = new Central();
+        //Central central = new Central();
         assertEquals(0, central.mediaPassageiro("1111111111"), DELTA);
     }
 
     @Test
     public void nenhumaAvaliacaoMotorista(){
-        Central central = new Central();
         assertEquals(0, central.mediaPassageiro("2222222222"), DELTA);
     }
     @Test
     public void avaliacoesPassageiro(){
-        Central central = new Central();
         Passageiro passageiro1 = new Passageiro("Felipe", "1234512345");
         Motorista motorista1 = new Motorista("Marcelo", "5432154321");
 
@@ -53,7 +58,6 @@ public class CentralTest {
 
     @Test
     public void avaliacoesMotorista(){
-        Central central = new Central();
         Passageiro passageiro1 = new Passageiro("Felipe", "1234512345");
         Motorista motorista1 = new Motorista("Marcelo", "5432154321");
 
@@ -83,7 +87,6 @@ public class CentralTest {
         central.adiciona(corrida4);
 
         Corrida corrida5 = new Corrida(passageiro1);
-        //corrida5.setMotorista(null);
         corrida5.avaliaPassageiro(3);
         corrida5.avaliaMotorista(1);
         central.adiciona(corrida5);

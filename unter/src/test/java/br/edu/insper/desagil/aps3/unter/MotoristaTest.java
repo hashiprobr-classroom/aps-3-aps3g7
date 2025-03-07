@@ -1,26 +1,30 @@
 package br.edu.insper.desagil.aps3.unter;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MotoristaTest {
+    private Motorista motorista;
+
+    @BeforeEach
+    void setup(){
+        motorista = new Motorista("Marcelo", "5432154321");
+    }
 
     @Test
     public void constroi(){
-        Motorista motorista = new Motorista("Marcelo","5432154321");
         assertEquals("5432154321",motorista.getCpf());
         assertEquals("Marcelo",motorista.getNome());
     }
     @Test
     public void mudaNome(){
-        Motorista motorista = new Motorista("Marcelo","5432154321");
         motorista.setNome("Joao");
         assertEquals("Joao",motorista.getNome());
     }
     @Test
     public void avalia(){
-        Motorista motorista = new Motorista("Marcelo","5432154321");
         Passageiro passageiro = new Passageiro("Felipe","1234512345");
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
@@ -29,7 +33,6 @@ public class MotoristaTest {
     }
     @Test
     public void avaliaBaixo(){
-        Motorista motorista = new Motorista("Marcelo","5432154321");
         Passageiro passageiro = new Passageiro("Felipe","1234512345");
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
@@ -38,7 +41,6 @@ public class MotoristaTest {
     }
     @Test
     public void avaliaAlto(){
-        Motorista motorista = new Motorista("Marcelo","5432154321");
         Passageiro passageiro = new Passageiro("Felipe","1234512345");
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
