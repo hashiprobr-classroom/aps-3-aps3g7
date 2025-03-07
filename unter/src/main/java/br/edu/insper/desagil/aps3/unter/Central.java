@@ -16,6 +16,9 @@ public class Central {
                 quantidade +=1;
             }
         }
+        if (quantidade == 0){
+            return 0.0;
+        }
         return media/quantidade;
     }
     public double mediaMotorista(String cpf){
@@ -28,6 +31,9 @@ public class Central {
                     quantidade += 1;
                 }
             }
+        }
+        if (quantidade == 0){
+            return 0.0;
         }
         return media/quantidade;
     }
