@@ -1,19 +1,10 @@
 package br.edu.insper.desagil.aps3.unter;
 
 import org.junit.jupiter.api.Test;
-
-//import org.junit.jupiter.api.BeforeEach;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CentralTest {
     private static final double DELTA = 0.000001;
-    //private Central central;
-
-  //  @BeforeEach
-  //  void setUp() {
-  //      Central central = new Central();
-  //  }
 
     @Test
     public void nenhumaAvaliacaoPassageiro(){

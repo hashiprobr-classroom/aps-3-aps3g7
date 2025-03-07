@@ -25,7 +25,7 @@ public class MotoristaTest {
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 3);
-        assertEquals(3,corrida.getNotaMotorista());
+        assertEquals(3,corrida.ajuste(corrida.getNotaMotorista()));
     }
     @Test
     public void avaliaBaixo(){
@@ -34,7 +34,7 @@ public class MotoristaTest {
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 0);
-        assertEquals(1,corrida.getNotaMotorista());
+        assertEquals(1,corrida.ajuste(corrida.getNotaMotorista()));
     }
     @Test
     public void avaliaAlto(){
@@ -43,7 +43,7 @@ public class MotoristaTest {
         Corrida corrida = new Corrida(passageiro);
         corrida.avaliaPassageiro(0);
         motorista.avalia(corrida, 6);
-        assertEquals(5,corrida.getNotaMotorista());
+        assertEquals(5,corrida.ajuste(corrida.getNotaMotorista()));
     }
 
 }

@@ -24,16 +24,16 @@ public class Corrida {
     public int getNotaPassageiro(){
         return notaPassageiro;
     }
-    private int ajuste(int n){
+    public int ajuste(int n){
         int f = n;
         if (n<1){f=1;}
         if (n>5){f=5;}
         return f;
     }
     public void avaliaPassageiro(int nota){
-        this.notaPassageiro = ajuste(nota);
+        this.notaPassageiro = nota;
     }
     public void avaliaMotorista(int nota){
-        this.notaMotorista = ajuste(nota);
+        this.notaMotorista = nota;
     }
 }
